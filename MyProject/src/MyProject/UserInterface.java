@@ -71,15 +71,55 @@ public class UserInterface implements Runnable {
 		container.add(Countryguitar);
 		Countryguitar.setVisible(false);
 		
-		JButton CountryBanjo = new JButton(new ImageIcon("background.png"));
+		JButton CountryBanjo = new JButton(new ImageIcon("Banjo.png"));
 		CountryBanjo.setBounds(157, 610, 150, 150);
 		CountryBanjo.setActionCommand("CountryBanjo");
 		MessageListener CountryBanjoOn = new MessageListener();
 		CountryBanjo.addActionListener(CountryBanjoOn);
 		container.add(CountryBanjo);
 		CountryBanjo.setVisible(false);
+//Pop///		
+		JButton PopBas = new JButton(new ImageIcon("ElBas.png"));
+		PopBas.setBounds(157, 2, 150, 150);
+		PopBas.setActionCommand("PopBas");
+		MessageListener PopBasOn = new MessageListener();
+		PopBas.addActionListener(PopBasOn);
+		container.add(PopBas);
+		PopBas.setVisible(false);
+
+		JButton PopGitarr = new JButton(new ImageIcon("ElGitarr.png"));
+		PopGitarr.setBounds(157, 154, 150, 150);
+		PopGitarr.setActionCommand("PopGitarr");
+		MessageListener PopGitarrOn = new MessageListener();
+		PopGitarr.addActionListener(PopGitarrOn);
+		container.add(PopGitarr);
+		PopGitarr.setVisible(false);
+
+		JButton PopPiano = new JButton(new ImageIcon("Piano.png"));
+		PopPiano.setBounds(157, 306, 150, 150);
+		PopPiano.setActionCommand("PopPiano");
+		MessageListener PopPianoOn = new MessageListener();
+		PopPiano.addActionListener(PopPianoOn);
+		container.add(PopPiano);
+		PopPiano.setVisible(false);
+
+		JButton PopTrombon = new JButton(new ImageIcon("Trombon.png"));
+		PopTrombon.setBounds(157, 458, 150, 150);
+		PopTrombon.setActionCommand("PopTrombon");
+		MessageListener PopTrombonOn = new MessageListener();
+		PopTrombon.addActionListener(PopTrombonOn);
+		container.add(PopTrombon);
+		PopTrombon.setVisible(false);
+
+		JButton PopTrummor = new JButton(new ImageIcon("Drums.png"));
+		PopTrummor.setBounds(157, 610, 150, 150);
+		PopTrummor.setActionCommand("PopTrummor");
+		MessageListener PopTrummorOn = new MessageListener();
+		PopTrummor.addActionListener(PopTrummorOn);
+		container.add(PopTrummor);
+		PopTrummor.setVisible(false);
 //Rock//
-		JButton RockBas = new JButton(new ImageIcon("Bass.png"));
+		JButton RockBas = new JButton(new ImageIcon("ElBas.png"));
 		RockBas.setBounds(157, 2, 150, 150);
 		RockBas.setActionCommand("RockBas");
 		MessageListener RockBasOn = new MessageListener();
@@ -103,7 +143,7 @@ public class UserInterface implements Runnable {
 		container.add(RockOrgel);
 		RockOrgel.setVisible(false);
 
-		JButton RockRythmGuitar = new JButton(new ImageIcon("background.png"));
+		JButton RockRythmGuitar = new JButton(new ImageIcon("ElGitarr.png"));
 		RockRythmGuitar.setBounds(157, 458, 150, 150);
 		RockRythmGuitar.setActionCommand("RockRythmGuitar");
 		MessageListener RockRythmGuitarOn = new MessageListener();
@@ -135,7 +175,7 @@ public class UserInterface implements Runnable {
 		container.add(DansbandGitarr);
 		DansbandGitarr.setVisible(false);
 
-		JButton DansbandSaxofon = new JButton(new ImageIcon("background.png"));
+		JButton DansbandSaxofon = new JButton(new ImageIcon("Saxofon.png"));
 		DansbandSaxofon.setBounds(157, 306, 150, 150);
 		DansbandSaxofon.setActionCommand("DansbandSaxofon");
 		MessageListener DansbandSaxofonOn = new MessageListener();
@@ -143,7 +183,7 @@ public class UserInterface implements Runnable {
 		container.add(DansbandSaxofon);
 		DansbandSaxofon.setVisible(false);
 
-		JButton DansbandSynth = new JButton(new ImageIcon("background.png"));
+		JButton DansbandSynth = new JButton(new ImageIcon("Synth.png"));
 		DansbandSynth.setBounds(157, 458, 150, 150);
 		DansbandSynth.setActionCommand("DansbandSynth");
 		MessageListener DansbandSynthOn = new MessageListener();
@@ -255,6 +295,12 @@ public class UserInterface implements Runnable {
 				Countryguitar.setVisible(false);
 				CountryBanjo.setVisible(false);
 				
+				PopBas.setVisible(false);
+				PopGitarr.setVisible(false);
+				PopPiano.setVisible(false);
+				PopTrombon.setVisible(false);
+				PopTrummor.setVisible(false);
+				
 				RockBas.setVisible(false);
 				RockLeadGuitar.setVisible(false);
 				RockOrgel.setVisible(false);
@@ -301,6 +347,29 @@ public class UserInterface implements Runnable {
 
 			}
 		});
+	////////
+			Pop.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					Instrument.frame2(container);
+	/////Genre/////				
+					Country.setVisible(false);
+					Pop.setVisible(true);
+					Rock.setVisible(false);
+					Dansband.setVisible(false);
+					FinskFolkmusik.setVisible(false);
+	///Instrument///
+					PopBas.setVisible(true);
+					PopGitarr.setVisible(true);
+					PopPiano.setVisible(true);
+					PopTrombon.setVisible(true);
+					PopTrummor.setVisible(true);
+					
+					Back.setVisible(true);
+					Stop.setVisible(true);
+
+				}
+			});
 ////////
 		Rock.addActionListener(new ActionListener() {
 			@Override

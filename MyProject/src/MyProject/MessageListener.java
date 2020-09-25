@@ -16,6 +16,12 @@ public class MessageListener implements ActionListener {
 	File CountryRythmguitar = new File("CountryGuitar.wav");
 	File CountryBanjo = new File("CountryBanjo.wav");
 	
+	File PopBas = new File("PopBas.wav");
+	File PopGitarr = new File("PopGitarr.wav");
+	File PopPiano = new File("PopPiano.wav");
+	File PopTrombon = new File("PopTrombon.wav");
+	File PopTrummor = new File("PopTrummor.wav");
+	
 	File RockBas = new File("RockBas.wav");
 	File RockLeadGuitar = new File("RockLeadGuitar.wav");
 	File RockOrgel = new File("RockOrgel.wav");
@@ -55,6 +61,22 @@ public class MessageListener implements ActionListener {
 		}
 		if (e.getActionCommand() == "CountryBanjo") {
 			im.PlaySound(CountryBanjo);
+		}
+////////
+		if (e.getActionCommand() == "PopBas") {
+			im.PlaySound(PopBas);
+		}
+		if (e.getActionCommand() == "PopGitarr") {
+			im.PlaySound(PopGitarr);
+		}
+		if (e.getActionCommand() == "PopPiano") {
+			im.PlaySound(PopPiano);
+		}
+		if (e.getActionCommand() == "PopTrombon") {
+			im.PlaySound(PopTrombon);
+		}
+		if (e.getActionCommand() == "PopTrummor") {
+			im.PlaySound(PopTrummor);
 		}
 ////////
 		if (e.getActionCommand() == "RockBas") {
